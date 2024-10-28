@@ -2,31 +2,30 @@ import 'package:first/dashboard.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const mlsc());
+  runApp(mlsc());
 }
 
 class mlsc extends StatelessWidget {
-  const mlsc({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.black),
-      home: const homepage(),
+      home:  homepage(),
     );
   }
 }
 
 class homepage extends StatelessWidget {
-  const homepage({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: ElevatedButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const Dashboard()));
-        }, child: const Text("Navigate")),
+          Navigator.push(context, MaterialPageRoute(builder: (context) =>  Dashboard()));
+        }, child:  Text("Navigate")),
       ),
     );
   }
